@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+            You are creating the "shopping cart experience" for an Online Marketplace.
+            From this API you can retrieve the list of the available books:
+            https://striveschool-api.herokuapp.com/books
+
+            What you need to do is:
+            0) Get all the products from the API using a fetch
+            1) Display the list of items available on the page using template literals `` and .forEach
+            2) Add an "Add to Cart" button
+            3) When the button is pressed, change the style of the item and add its data to another list. That's going to be the Cart's list. Display it somewhere.
+            4) Allow the user to delete items from the cart's list
+            5) Add a "Skip" or "Ignore" button to each book in the page
+            6) When pressed, the button should remove the corresponding item from the page, so the user can focus on those that interests him more.
+            7) Add a search bar where the user can search for books. When the user types more than 3 chars, you should filter the content of the page to show only the items with a matching name (hint: use .filter method)
+            
+            
+            [EXTRA]
+            8) Add a "Clean Cart" button, to clean the whole list.
+            9) Create a "Detail page" for the product. When the user clicks on a product name, the app should redirect him to the secondary page, passing the ASIN in query string
+            10) In the detail page retrieve the ASIN from the query string and use it to fetch and show some details of the selected product (use this endpoint: https://striveschool-api.herokuapp.com/books/1940026091 to fetch the details of a specific book)
+        -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Own css -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Bookshop</title>
+  </head>
+  <body>
+    <header class="d-flex align-items-center">
+      <div
+        class="
+          container
+          d-flex
+          flex-column
+          justify-content-evenly
+          align-items-center
+        "
+      >
+        <h1 class="m-0">Welcome to <span>All You Need Is Books</span></h1>
+        <div class="input-group m-0">
+          <input
+            type="text"
+            class="form-control"
+            id="filter-input"
+            placeholder="Filter by Book Name"
+            aria-label="Filter by Book Name"
+            aria-describedby="filter-btn"
+          />
+          <button class="btn btn-warning" type="button" id="filter-btn">
+            Filter
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="d-flex">
+      <aside>
+        <h2 class="mb-0">Cart</h2>
+        <div class="container">
+          <div class="d-flex flex-column" id="cart-section"></div>
+        </div>
+      </aside>
+      <div id="library-section">
+        <div class="container d-flex flex-column align-items-center">
+          <h2>Book Collection</h2>
+          <div
+            class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4"
+            id="books-grid"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Own script -->
+    <script src="./script.js"></script>
+  </body>
+</html>

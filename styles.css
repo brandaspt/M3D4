@@ -1,0 +1,61 @@
+body {
+  height: 100vh;
+}
+
+/* Header section */
+header {
+  background-image: url("https://www.detroitlabs.com/wp-content/uploads/2018/02/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header > div {
+  height: 30vh;
+}
+header .input-group {
+  max-width: 400px;
+}
+h1 {
+  color: rgb(39, 77, 77);
+  background-color: wheat;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  font-style: italic;
+}
+h1 > span {
+  font-size: 2.5rem;
+}
+
+/* Main section */
+/* Cart */
+main {
+  height: 70vh;
+}
+h2 {
+  margin: 20px auto;
+}
+aside {
+  display: none;
+  background-color: rgb(214, 214, 214);
+  border-right: 2px solid black;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 500px) {
+  aside {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Library */
+#library-section {
+  flex-grow: 1;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+#library-section .price {
+  text-align: right;
+  color: rgb(75, 177, 66);
+}
