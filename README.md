@@ -5,7 +5,6 @@
 ## Table of contents
 
 - [General info](#general-info)
-- [Screenshots](#screenshots)
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Features](#features)
@@ -15,13 +14,6 @@
 ## General info
 
 Book Store project undertaken during Strive School's Full Stack Developer Course. Includes shopping cart.
-
-## Screenshots
-
-![Topics Screen](resources/images/topicsScreen.png)
-![Question Screen](resources/images/questionScreen.png)
-![Answer Screen](resources/images/answerScreen.png)
-![Results Screen](resources/images/resultScreen.png)
 
 ## Technologies
 
