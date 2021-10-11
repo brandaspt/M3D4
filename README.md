@@ -42,7 +42,7 @@ Book Store project undertaken during Strive School's Full Stack Developer Course
 
 ## Status
 
-Project is: _finished.
+Project is: _finished_.
 
 ## Contact
 
